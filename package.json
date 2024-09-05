@@ -6,7 +6,8 @@
   "scripts": {
     "backend":"cd backend && npm i && npm run start:dev",
     "frontend":"cd frontend && npm i && npm run dev",
-    "start":"npm run backend & npm run frontend"
+    "db":"docker-compose up -d",
+    "start":"npm run db & npm run backend & npm run frontend"
   },
   "keywords": [],
   "author": "",
