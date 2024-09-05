@@ -1,0 +1,14 @@
+{
+  "name": "desafio-lupit-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend":"cd backend && npm run start:dev",
+    "frontend":"cd frontend && npm run dev",
+    "start":"npm run backend & npm run frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
