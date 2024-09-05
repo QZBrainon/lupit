@@ -82,18 +82,6 @@ O jogador será excluído do banco de dados.
 
 Você pode visualizar a lista de jogadores novamente na rota "/".
 
-## Contribuição
+## Agradecimentos
 
-Se você deseja contribuir com o projeto, siga os seguintes passos:
-
-1. Crie um fork do repositório.
-2. Crie uma branch para sua alteração.
-3. Faça suas alterações e teste-os.
-4. Envie suas alterações para o seu fork.
-5. Crie um pull request para o repositório oficial.
-
-Lembre-se de seguir as convenções de codificação e organização do projeto.
-
-## Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para obter mais informações.
+Agradeço a [Lupit](https://lupit.io/) e a todos os membros da equipe pelo convite para participar do desafio.
