@@ -23,8 +23,8 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 Clone o repositório do GitHub:
 
 ```bash
-git clone https://github.com/seu-usuario/desafio-lupit-fullstack.git
-cd desafio-lupit-fullstack
+git clone git@github.com:QZBrainon/lupit.git
+cd lupit
 ```
 
 ### Iniciar o Projeto
