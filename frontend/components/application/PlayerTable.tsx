@@ -8,8 +8,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "../ui/button";
-import { PlusIcon, Edit2, Trash2 } from "lucide-react";
+import { Edit2, Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Player = {
   id: number;
@@ -64,13 +65,11 @@ export function PlayerTable({
                     })}
                   </TableCell>
                   <TableCell className="text-right flex justify-end">
-                    <Button
-                      variant="ghost"
-                      aria-label="edit_player"
-                      onClick={() => router.push(`/jogador/${player?.id}`)}
-                    >
-                      <Edit2 className=" h-4 w-4" />
-                    </Button>
+                    <Link href={`/jogador/${player?.id}`}>
+                      <Button variant="ghost" aria-label="edit_player">
+                        <Edit2 className=" h-4 w-4" />
+                      </Button>
+                    </Link>
                     <Button
                       variant="ghost"
                       aria-label="delete_player"
