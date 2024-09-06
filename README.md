@@ -31,11 +31,23 @@ cd desafio-lupit-fullstack
 
 Execute os seguintes comandos para inicializar o projeto:
 
+1. Inicie o banco de dados com o comando:
+
 ```bash
-npm start
+docker-compose up -d
 ```
 
-O frontend e backend serão iniciados automaticamente.
+2. Entre no dir backend e inicie a API com o comando:
+
+```bash
+cd backend && npm install && npm run dev
+```
+
+3. Abra uma nova sessão no terminal e inicie o frontend com o comando:
+
+```bash
+cd frontend && npm install && npm run dev
+```
 
 ### Acessar o Frontend
 
