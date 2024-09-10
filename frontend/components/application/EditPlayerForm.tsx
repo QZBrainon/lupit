@@ -17,24 +17,12 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Controller, useForm, useFormState } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { showEditSuccessAlert, showErrorAlert } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
-interface Player {
-  id?: number;
-  name?: string;
-  age?: number;
-  teamId?: number;
-}
-
-interface Team {
-  id: number;
-  name: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import { Player } from "@/types/Player";
+import { Team } from "@/types/Team";
 
 export default function EditPlayerForm({
   player,

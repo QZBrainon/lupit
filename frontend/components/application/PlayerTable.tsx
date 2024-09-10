@@ -9,34 +9,16 @@ import {
 } from "@/components/ui/table";
 import { Button } from "../ui/button";
 import { Edit2, Trash2 } from "lucide-react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-
-type Player = {
-  id: number;
-  name: string;
-  age: number;
-  createdAt: Date;
-  updatedAt: Date;
-  teamId: number;
-  team: {
-    id: number;
-    name: string;
-    createdAt: Date;
-    updatedAt: Date;
-    players: Player[];
-  };
-};
+import { Player } from "@/types/Player";
 
 export function PlayerTable({
   players,
-  handleDeleteAndRefresh,
+  onDelete,
 }: {
   players: Player[];
-  handleDeleteAndRefresh: (id: number) => Promise<void>;
+  onDelete: (id: number) => Promise<void>;
 }) {
-  const router = useRouter();
-
   return (
     <div>
       {players.length > 0 ? (
@@ -73,7 +55,7 @@ export function PlayerTable({
                     <Button
                       variant="ghost"
                       aria-label="delete_player"
-                      onClick={() => handleDeleteAndRefresh(player?.id)}
+                      onClick={() => onDelete(player?.id)}
                     >
                       <Trash2 className="h-4 w-4" />
                     </Button>

@@ -62,7 +62,7 @@ export const showDeleteAlert = async (
     showCancelButton: true,
     confirmButtonText: "Excluir",
     cancelButtonText: "Cancelar",
-    confirmButtonColor: "#d9480f",
+    confirmButtonColor: "#ef4444",
   });
 
   if (result.isConfirmed) {

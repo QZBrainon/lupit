@@ -2,28 +2,12 @@
 import { PlayerTable } from "@/components/application/PlayerTable";
 import { useEffect, useState } from "react";
 import { showDeleteAlert } from "@/lib/utils";
-import Spinner from "@/components/application/Spinner";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import { PlusIcon } from "lucide-react";
 import Link from "next/link";
+import { Player } from "@/types/Player";
 
 export default function App() {
-  type Player = {
-    id: number;
-    name: string;
-    age: number;
-    createdAt: Date;
-    updatedAt: Date;
-    teamId: number;
-    team: {
-      id: number;
-      name: string;
-      createdAt: Date;
-      updatedAt: Date;
-      players: Player[];
-    };
-  };
   const [players, setPlayers] = useState<Player[]>([]);
 
   const fetchPlayers = async () => {
@@ -40,8 +24,6 @@ export default function App() {
     await showDeleteAlert(id, fetchPlayers);
   };
 
-  const router = useRouter();
-
   return (
     <div>
       <div className="container mx-auto w-full flex justify-between items-center py-6 gap-4 mt-28 border-b border-border/40">
@@ -55,10 +37,7 @@ export default function App() {
           </Link>
         </div>
       </div>
-      <PlayerTable
-        players={players}
-        handleDeleteAndRefresh={handleDeleteAndRefresh}
-      />
+      <PlayerTable players={players} onDelete={handleDeleteAndRefresh} />
     </div>
   );
 }

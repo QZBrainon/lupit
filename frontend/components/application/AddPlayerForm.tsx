@@ -20,18 +20,12 @@ import { Button } from "@/components/ui/button";
 import { Controller, useForm } from "react-hook-form";
 import { showErrorAlert, showSuccessAlert } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { Team } from "@/types/Team";
 
 interface PlayerInfo {
   name?: string;
   age?: number;
   teamId?: number;
-}
-
-interface Team {
-  id: number;
-  name: string;
-  createdAt: Date;
-  updatedAt: Date;
 }
 
 export default function AddPlayerForm({ teams }: { teams: Team[] }) {
